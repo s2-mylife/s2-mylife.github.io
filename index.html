@@ -97,6 +97,14 @@
       startTransition(elementoVisible);
     }
 
+    if(hidden == 'step2') {
+      stopCount();
+    }
+
+    if(hidden == 'step1') {
+      startCount(); 
+    }
+
     // Alterna a visibilidade dos elementos
     if (elementoVisible) {
       elementoVisible.classList.toggle("hidden"); // Torna o elemento visível
@@ -112,7 +120,6 @@
     });
   }
 
-  stopCount(); // Chama a função para parar o intervalo depois de 10 segundos
 </script>
 <body>
   <header></header>
