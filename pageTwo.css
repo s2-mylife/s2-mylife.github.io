@@ -1,0 +1,137 @@
+.frameBackgroundOne {
+    width: 100vw;
+    height: 100vh;
+}
+
+.section {
+    background-color: #240046;
+}
+
+#pageTwo {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(36, 0, 70);
+    background: linear-gradient(180deg,
+            rgba(36, 0, 70, 1) 0%,
+            rgba(11, 19, 43, 1) 100%);
+    box-shadow: inset -1px 0px 14px 0px rgb(248 255 9 / 30%);
+}
+
+.continue {
+    color: #ff6f61;
+    font-family: Dancing Script;
+    font-weight: bold;
+    font-size: 1.2em;
+
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 80px;
+}
+
+.continue:hover {
+    color: #c2483c;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {}
+
+@media (min-width: 480px) {}
+
+.starRecord {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 5;
+}
+
+.starRecord:nth-child(1) {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 5;
+}
+
+.starRecord:nth-child(2) {
+    position: absolute;
+    top: 42%;
+    left: 29%;
+    z-index: 5;
+}
+
+.starRecord:nth-child(3) {
+    position: absolute;
+    top: 46%;
+    left: 46%;
+    z-index: 5;
+}
+
+.starRecord:nth-child(4) {
+    position: absolute;
+    top: 22%;
+    left: 41%;
+    z-index: 5;
+}
+
+.starRecord:nth-child(5) {
+    position: absolute;
+    top: 14%;
+    left: 53%;
+    z-index: 5;
+}
+
+.selected {
+    border: 3px solid #101010;
+    border-style: dotted;
+}
+
+.line {
+    position: absolute;
+    width: 2px;
+    background-color: white;
+    z-index: -1;
+}
+
+.line-1-2 {
+    top: 32%;
+    left: 19%;
+    width: calc(14% - 10px);
+    height: 1px;
+    color: white;
+    background-color: white;
+    z-index: 1;
+    transform: rotate(49deg);
+}
+
+.line-2-3 {
+    top: 45%;
+    left: 30%;
+    width: calc(18% - 10px);
+    height: 2px;
+    z-index: 1;
+    transform: rotate(7deg);
+}
+
+.line-3-4 {
+    top: 35%;
+    left: 39%;
+    width: calc(12% - 10px);
+    height: 1px;
+    z-index: 1;
+    transform: rotate(64deg);
+}
+
+.line-4-5 {
+    top: 19%;
+    left: 41%;
+    width: calc(14% - 10px);
+    height: 1px;
+    z-index: 1;
+    transform: rotate(-17deg)
+}
