@@ -194,6 +194,7 @@
 
 circle {
     cursor: pointer;
+    z-index: 5;
 }
 
 

@@ -1,23 +1,3 @@
-// ORIENTATION VALIDATE
-
-function checkOrientation() {
-  if (window.innerWidth > window.innerHeight) {
-    // horizontal
-    document.body.classList.remove("blocked");
-    document.getElementById("contentBody").classList.remove("hidden");
-  } else {
-    // vertical
-    document.body.classList.add("blocked");
-    document.getElementById("contentBody").classList.add("hidden");
-  }
-}
-
-checkOrientation();
-
-window.addEventListener("resize", checkOrientation);
-
-
-
 // LOCK/UNLOCK PAGE
 
 let visitCount = localStorage.getItem("visitCount");
@@ -78,6 +58,17 @@ function createStars(element) {
 
 window.onload = createStars("Stars");
 
+function removeStars(element) {
+  const starsContainer = document.getElementById(element); // Seleciona o contêiner
+  const stars = starsContainer.getElementsByClassName("star"); // Seleciona todas as estrelas
+
+  // Remove cada estrela do contêiner
+  while (stars.length > 0) {
+    stars[0].remove(); // Remove a primeira estrela
+  }
+}
+
+
 // FUNCTION FOR SELECTED STAR RECORD
 const stars = document.querySelectorAll(".circle-data");
 
@@ -87,6 +78,27 @@ stars.forEach((star) => {
     star.classList.add("selected");
   });
 });
+
+// ORIENTATION VALIDATE
+
+function checkOrientation() {
+  if (window.innerWidth > window.innerHeight) {
+    // horizontal
+    document.body.classList.remove("blocked");
+    document.getElementById("contentBody").classList.remove("hidden");
+    removeStars('Stars');
+    createStars("Stars");
+  } else {
+    // vertical
+    document.body.classList.add("blocked");
+    document.getElementById("contentBody").classList.add("hidden");
+  }
+}
+
+checkOrientation();
+
+window.addEventListener("resize", checkOrientation);
+
 
 
 
