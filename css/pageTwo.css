@@ -111,14 +111,6 @@
 }
 
 
-
-
-
-.selected {
-    border: 3px solid #101010;
-    border-style: dotted;
-}
-
 .line {
     position: absolute;
     width: 2px;

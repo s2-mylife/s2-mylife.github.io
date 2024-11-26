@@ -79,7 +79,7 @@ function createStars(element) {
 window.onload = createStars("Stars");
 
 // FUNCTION FOR SELECTED STAR RECORD
-const stars = document.querySelectorAll(".starRecord");
+const stars = document.querySelectorAll(".circle-data");
 
 stars.forEach((star) => {
   star.addEventListener("click", () => {
