@@ -1,129 +1,31 @@
-<!DOCTYPE html5>
-<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-  />
-  <link href="effects.css" rel="stylesheet" />
-  <link href="pageOne.css" rel="stylesheet" />
-  <link href="pageTwo.css" rel="stylesheet" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-    rel="stylesheet"
-  />
-  <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"
-  ></script>
-  <meta name="description" content="" />
-  <meta name="author" content="Thiago Lima" />
-  <title>For my favorite</title>
-</head>
-<!-- <script>
-    alert('Para uma melhor imersão, coloque o celular na horizontal ↺');
-</script> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Favorite</title>
+    <meta name="author" content="Thiago Lima" />
 
-<!-- EFEITOS -->
-<script>
-  let intervalId; // Declara a variável global para armazenar o identificador do intervalo
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/effects.css" rel="stylesheet" />
+    <link href="css/pageOne.css" rel="stylesheet" />
+    <link href="css/pageTwo.css" rel="stylesheet" />
 
-  function startCount() {
-    intervalId = setInterval(function () {
-      var _segundo = 1000;
-      var _minuto = _segundo * 60;
-      var _hora = _minuto * 60;
-      var _dia = _hora * 24;
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-      var atual = new Date("06/01/2024 21:00:00");
-      var fim = new Date();
 
-      var diferenca = fim - atual;
+    <!-- JSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+  </head>
 
-      var dias = Math.floor(diferenca / _dia);
-      var horas = Math.floor((diferenca % _dia) / _hora);
-      var minutos = Math.floor((diferenca % _hora) / _minuto);
-      var segundos = Math.floor((diferenca % _minuto) / _segundo);
-
-      console.log(dias);
-      document.getElementById("contador").innerHTML = dias + " dias, ";
-      document.getElementById("contador").innerHTML += horas + " horas, ";
-      document.getElementById("contador").innerHTML += minutos + " minutos e ";
-      document.getElementById("contador").innerHTML += segundos + " segundos";
-    }, 1000);
-  }
-
-  function stopCount() {
-    setTimeout(() => {
-      clearInterval(intervalId);
-      console.log("Intervalo parado.");
-    }, 1000); // Parando o intervalo após 10 segundos
-  }
-
-  startCount(); // Inicia a contagem
-  function submit(hidden, visible) {
-    const elementoHidden = hidden ? document.querySelector("." + hidden) : null; // Seleciona o elemento oculto
-    const elementoVisible = visible
-      ? document.querySelector("." + visible)
-      : null; // Seleciona o elemento visível
-    const buttons = document.querySelectorAll(".buttons");
-
-    // Função para iniciar a transição
-    function startTransition(element) {
-      element.classList.remove("show"); // Remove a classe 'show' para reiniciar a transição
-      element.classList.add("transition-white"); // Adiciona a classe 'transition-white' ao elemento
-      // Inicia a transição após 1 segundo
-      setTimeout(() => {
-        element.classList.add("show"); // Faz a transição de opacidade e cor de fundo
-      }, 100); // Delay pequeno para ativar a transição
-    }
-
-    // Iniciar transição no elemento visível
-    if (elementoVisible) {
-      startTransition(elementoVisible);
-    }
-
-    if (hidden == "step2") {
-      stopCount();
-    }
-
-    if (hidden == "step1") {
-      startCount();
-    }
-
-    // Alterna a visibilidade dos elementos
-    if (elementoVisible) {
-      elementoVisible.classList.toggle("hidden"); // Torna o elemento visível
-    }
-
-    if (elementoHidden) {
-      elementoHidden.classList.toggle("hidden"); // Torna o elemento oculto
-    }
-
-    // Esconde todos os botões
-    buttons.forEach(function (button) {
-      button.classList.add("hidden");
-    });
-  }
-</script>
-<body class="blocked">
-  <div id="contentBody">
-    <header></header>
-    <main>
+  <body class="blocked">
+    <div id="contentBody">
       <div class="content lock">
         <div id="lockPage">
           <div class="lock-img"><img src="photos/lock.avif" /></div>
@@ -132,7 +34,6 @@
       </div>
 
       <div class="content unlock">
-        <div id="Stars"></div>
         <div class="background-message" id="remove">
           <div class="message">
             Mostrando que cada segundo ao seu lado é um pedaço do tempo que
@@ -159,354 +60,42 @@
         </div>
 
         <div id="pageTwo" class="step2 hidden">
-          <div>
-            <div
-              class="starRecord selected"
-              data-bs-toggle="modal"
-              data-bs-target="#oneStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#twoStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#treeStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#fourStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#fiveStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#sixStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#sevenStarModal"
-            ></div>
-            <div
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#eightStarModal"
-            ></div>
-            <div
-              hidden
-              class="starRecord"
-              data-bs-toggle="modal"
-              data-bs-target="#nineStarModal"
-            ></div>
-
-            <!-- Primeiro -->
-            <div
-              class="modal fade"
-              id="oneStarModal"
-              tabindex="-1"
-              aria-labelledby="oneStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="oneStarModalLabel">
-                      Nosso primeiro date s2
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    Nos conhecemos no Happn e fomos ao nosso primeiro encontro
-                    no shopping da cidade de piqueri, até levei você para
-                    conhecer a minha mãe kkkkkkk
-                    <div class="photos">
-                      <img src="photos/IMG-20241121-WA0085.jpg" />
-                      <img src="photos/IMG-20241121-WA0086.jpg" />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Segundo -->
-            <div
-              class="modal fade"
-              id="twoStarModal"
-              tabindex="-1"
-              aria-labelledby="twoStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="twoStarModalLabel">
-                      Parque de Franco
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    Quando você foi toda pervetida querendo me beijar e eu
-                    apenas querendo te conhecer ( ͡° ͜ʖ ͡°), você toda fofinhaaa<br />
-                    <div class="photos">
-                      <img src="photos/IMG-20241120-WA0068.jpg" />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Terceiro -->
-            <div
-              class="modal fade"
-              id="treeStarModal"
-              tabindex="-1"
-              aria-labelledby="treeStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="treeStarModalLabel">
-                      Dia da vacina
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    Infelizmente não me recordo muito desse dia, e não temos
-                    fotinha :(
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quarto -->
-            <div
-              class="modal fade"
-              id="fourStarModal"
-              tabindex="-1"
-              aria-labelledby="fourStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="fourStarModalLabel">
-                      Reencontro
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    Nosso primeiro reencontro, e fiquei felizzzz demais<br />
-                    Mas mano pagamos caro e só comemos uma pratada daqueles mini
-                    hamburgueres kkkkkkkk
-                    <div class="photos">
-                      <img src="photos/IMG-20241125-WA0034.jpg" />
-                      <img src="photos/IMG-20241125-WA0035.jpg" />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quinto -->
-            <div
-              class="modal fade"
-              id="fiveStarModal"
-              tabindex="-1"
-              aria-labelledby="fiveStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="fiveStarModalLabel">
-                      A virada
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    O dia em que você foi a minha lojaa, toda fofinha e
-                    bonitinha s2<br />
-                    Foi nesse dia que as coisas mudaram, te achava uma pessoa
-                    encantadora, mas apartir dai você se tornou única, aguardei
-                    pacientemente pela oportunidade e a chance para investir em
-                    você, enquanto fazia parte sileciosamente te apoiando a
-                    distância s2
-
-                    <div class="photos">
-                      <img src="photos/Screenshot_20241125-213120.png" />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sexto -->
-            <div
-              class="modal fade"
-              id="sixStarModal"
-              tabindex="-1"
-              aria-labelledby="sixStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="sixStarModalLabel">
-                      A chacára
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    O dia que você me chamou pra chacara e apesar de eu ser
-                    introvertido aceitei, e foi muito divertido ksksksks Melhor
-                    ainda foi poder ficar contigo 2 dias e aproveitar da
-                    piscina, me acostumaria com aquela vida fácil fácil
-                    <div class="photos">
-                      <img src="photos/IMG-20241125-WA0041.jpg" />
-                      <img src="photos/IMG-20241125-WA0042.jpg" />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sétimo -->
-            <div
-              class="modal fade"
-              id="sevenStarModal"
-              tabindex="-1"
-              aria-labelledby="sevenStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="sevenStarModalLabel">
-                      Cúlinaria do Thiago Del Rey
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    O primeiro dia que você provou da minha culinária, e aprovou
-                    :D, só não gostei de receber 9/10. Sendo que ficou 10/10 e
-                    ainda você ficou toda ansiosa mandando "to indo", "agora é
-                    sério to indo"
-                    <div class="photos">
-                      <img src="photos/IMG-20241123-WA0013.jpg" />
-                      <img src="photos/IMG-20241125-WA0039.jpg" />
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Eight -->
-            <div
-              class="modal fade"
-              id="eightStarModal"
-              tabindex="-1"
-              aria-labelledby="eightStarModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="eightStarModalLabel">
-                      A decisão s2
-                    </h1>
-                  </div>
-                  <div class="modal-body">
-                    Nosso próximo encontro, como será? Onde será? Só sei de uma
-                    coisa, com você tudo é especial!! I LOVE YOU ELDINHA!!
-                    <div class="photos"></div>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="line line-1-2"></div>
-            <div class="line line-2-3"></div>
-            <div class="line line-3-4"></div>
-            <div class="line line-4-5"></div>
-            <div class="line line-5-6"></div>
-            <div class="line line-6-7"></div>
-            <div class="line line-7-8"></div>
-            <div class="line line-8-9 hidden"></div>
-          </div>
-
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <!-- Definição do filtro para criar a aura -->
+              <defs>
+                <filter id="aura-effect" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="0">
+                    <animate attributeName="stdDeviation" from="0" to="10" dur="1.5s" repeatCount="indefinite" />
+                  </feGaussianBlur>
+                  <feMerge>
+                    <feMergeNode />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              
+            <!-- Pontos -->
+            <circle class="circle-data" data-id="1" cx="10%" cy="30%" r="5" fill="white" style="filter: url(#aura-effect);"></circle>
+            <circle class="circle-data" data-id="2" cx="176" cy="162" r="5" fill="white"></circle>
+            <circle class="circle-data" data-id="3"  cx="266" cy="95" r="5" fill="white"></circle>
+            <circle class="circle-data" data-id="4"  cx="350" cy="300" r="5" fill="white"></circle>
+            <circle class="circle-data" data-id="5"  cx="50" cy="50" r="5" fill="yellow"></circle>
+            <circle class="circle-data" data-id="6"  cx="375" cy="200" r="5" fill="yellow"></circle>
+            <circle class="circle-data" data-id="7"  cx="200" cy="350" r="5" fill="yellow"></circle>
+            <circle class="circle-data" data-id="8"  cx="400" cy="50" r="5" fill="white"></circle>
+            <circle class="circle-data" data-id="9"  cx="80%" cy="20%" r="5" fill="white"></circle>
+            
+            <!-- Linhas conectando os pontos -->
+            <line x1="10%" y1="30%" x2="176" y2="162" stroke="white" stroke-width="2" />
+            <line x1="176" y1="162" x2="266" y2="95" stroke="white" stroke-width="2" />
+            <line x1="266" y1="95" x2="350" y2="300" stroke="white" stroke-width="2" />
+            <line x1="350" y1="300" x2="50" y2="50" stroke="white" stroke-width="2" />
+            <line x1="50" y1="50" x2="375" y2="200" stroke="white" stroke-width="2" />
+            <line x1="375" y1="200" x2="200" y2="350" stroke="white" stroke-width="2" />
+            <line x1="200" y1="350" x2="400" y2="50" stroke="white" stroke-width="2" />
+            <line x1="400" y1="50" x2="80%" y2="20%" stroke="white" stroke-width="2" />
+            
+          </svg>
           <label
             class="continue texto-pulsante"
             onclick="submit('step2', 'step1')"
@@ -514,109 +103,50 @@
           >
         </div>
       </div>
-    </main>
-    <footer></footer>
-  </div>
-</body>
-<script>
-  function checkOrientation() {
-    if (window.innerWidth > window.innerHeight) {
-      // Modo horizontal
-      document.body.classList.remove("blocked");
-      document.getElementById("contentBody").classList.remove("hidden");
-    } else {
-      // Modo vertical
-      document.body.classList.add("blocked");
-      document.getElementById("contentBody").classList.add("hidden");
-    }
-  }
 
-  // Verificar a orientação inicial
-  checkOrientation();
+      
+      <div id="Stars"></div>
+    </div>
 
-  // Monitorar mudanças na orientação
-  window.addEventListener("resize", checkOrientation);
-</script>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="infoModal"
+      tabindex="-1"
+      aria-labelledby="infoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">Título Placeholder</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="infoModalDescription">Descrição Placeholder</p>
+            <div id="infoModalImages" class="d-flex flex-wrap gap-2"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<script>
-  // Obtém o número de visitas armazenado no localStorage
-  let visitCount = localStorage.getItem("visitCount");
+    <!-- JSS -->
+    <script src="config.js"></script>
+    <script src="js/end.js"></script>
 
-  if (!visitCount) {
-    // Se for a primeira vez, inicializa o contador
-    visitCount = 1;
-  } else {
-    // Incrementa o contador
-    visitCount = parseInt(visitCount) + 1;
-  }
-
-  // Atualiza o contador no localStorage
-  localStorage.setItem("visitCount", visitCount);
-
-  // Mostra o conteúdo apropriado com base no número de visitas
-  if (visitCount <= 3) {
-    document.querySelector(".lock").style.display = "block";
-  } else if (visitCount > 3) {
-    document.querySelector(".unlock").style.display = "block";
-  }
-  
-</script>
-
-<script>
-  // Função para fazer a div desaparecer suavemente
-  setTimeout(() => {
-    const div = document.getElementById("remove");
-    div.style.opacity = "0"; // Torna a div invisível
-    setTimeout(() => {
-      div.style.display = "none"; // Após a transição, oculta a div
-    }, 1000); // Tempo suficiente para a transição de opacidade (1s)
-  }, 5000); // 5000ms = 5 segundos
-
-  // Configurações
-  const numberOfStars = 200; // Número de estrelas
-
-  // Função para gerar estrelas
-  function createStars(element) {
-    const starsContainer = document.getElementById(element); // Seleciona o contêiner
-    const containerWidth = starsContainer.clientWidth; // Largura do contêiner
-    const containerHeight = starsContainer.clientHeight; // Altura do contêiner
-
-    for (let i = 0; i < numberOfStars; i++) {
-      const star = document.createElement("div");
-      star.classList.add("star");
-
-      const random = Math.floor(Math.random() * 10);
-      if (random > 5) {
-        star.classList.add("star-pulsante");
-      }
-
-      // Posições aleatórias dentro do contêiner
-      const x = Math.random() * containerWidth;
-      const y = Math.random() * containerHeight;
-
-      // Define a posição
-      star.style.left = `${x}px`;
-      star.style.top = `${y}px`;
-
-      // Adiciona a estrela ao contêiner
-      starsContainer.appendChild(star);
-    }
-  }
-
-  // Gera as estrelas ao carregar a página
-  //
-  // Seleciona todas as divs com a classe 'starRecord'
-  const stars = document.querySelectorAll(".starRecord");
-
-  // Função que adiciona a classe 'selected' ao elemento clicado e remove de outros
-  stars.forEach((star) => {
-    star.addEventListener("click", () => {
-      // Remove a classe 'selected' de todos os elementos
-      stars.forEach((s) => s.classList.remove("selected"));
-      // Adiciona a classe 'selected' ao elemento clicado
-      star.classList.add("selected");
-    });
-  });
-
-  window.onload = createStars("Stars");
-</script>
+  </body>
+</html>
