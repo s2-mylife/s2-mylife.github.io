@@ -37,7 +37,11 @@
 <!-- <script>
     alert('Para uma melhor imersão, coloque o celular na horizontal ↺');
 </script> -->
-
+<style>
+  .content {
+    display: none;
+  }
+</style>
 <!-- EFEITOS -->
 <script>
   let intervalId; // Declara a variável global para armazenar o identificador do intervalo
@@ -123,242 +127,422 @@
 <body>
   <header></header>
   <main>
-    <div id="Stars"></div>
-    <div class="background-message" id="remove">
-      <div class="message">
-        Mostrando que cada segundo ao seu lado é um pedaço do tempo que jamais
-        trocaria
+    <div class="content lock">
+      <div id="lockPage">
+        <div class="lock-img"><img src="photos/lock.avif" /></div>
+        <p>Conteudo feito para a minha favorita 😀</p>  
       </div>
     </div>
 
-    <div id="pageOne" class="step1">
-      <div id="clock-modal">
-        <div id="clock">
-          <img src="clock.webp" />
+    <div class="content unlock">
+      <div id="Stars"></div>
+      <div class="background-message" id="remove">
+        <div class="message">
+          Mostrando que cada segundo ao seu lado é um pedaço do tempo que jamais
+          trocaria
         </div>
-        <div id="clock-times">
-          <label>Ínício da história:</label> 2020<br />
-          <label>Reencontro:</label> <i id="contador"></i>
-        </div>
-        <br />
-      </div>
-      <label class="continue texto-pulsante" onclick="submit('step1', 'step2')"
-        >Continuar...</label
-      >
-    </div>
-
-    <div id="pageTwo" class="step2 hidden">
-      <div>
-        <div
-          class="starRecord selected"
-          data-bs-toggle="modal"
-          data-bs-target="#oneStarModal"
-        ></div>
-        <div
-          class="starRecord"
-          data-bs-toggle="modal"
-          data-bs-target="#twoStarModal"
-        ></div>
-        <div
-          class="starRecord"
-          data-bs-toggle="modal"
-          data-bs-target="#treeStarModal"
-        ></div>
-        <div
-          class="starRecord"
-          data-bs-toggle="modal"
-          data-bs-target="#fourStarModal"
-        ></div>
-        <div
-          class="starRecord"
-          data-bs-toggle="modal"
-          data-bs-target="#fiveStarModal"
-        ></div>
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="oneStarModal"
-          tabindex="-1"
-          aria-labelledby="oneStarModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="oneStarModalLabel">
-                  First Date
-                </h1>
-              </div>
-              <div class="modal-body">
-                Começamos no Happn e fomos ao nosso primeiro encontro no
-                shopping da cidade de piqueri
-                <div class="photos">
-                  <img src="photos/IMG-20241121-WA0085.jpg" />
-                  <img src="photos/IMG-20241121-WA0086.jpg" />
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="twoStarModal"
-          tabindex="-1"
-          aria-labelledby="twoStarModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="twoStarModalLabel">
-                  Parque de Franco
-                </h1>
-              </div>
-              <div class="modal-body">
-                Quando você foi toda pervetida querendo me beijar e eu apenas
-                querendo te conhecer ( ͡° ͜ʖ ͡°)<br />
-                <div class="photos">
-                  <img src="photos/IMG-20241120-WA0068.jpg" />
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="treeStarModal"
-          tabindex="-1"
-          aria-labelledby="treeStarModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="treeStarModalLabel">
-                  Dia da vacina
-                </h1>
-              </div>
-              <div class="modal-body">
-                Infelizmente não me recordo muito desse dia, e não temos fotinha
-                :(
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="fourStarModal"
-          tabindex="-1"
-          aria-labelledby="fourStarModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="fourStarModalLabel">
-                  Reencontro
-                </h1>
-              </div>
-              <div class="modal-body">
-                Nosso primeiro reencontro, e fiquei felizzzz demais<br />
-                Mas mano pagamos caro e só comemos uma pratada daqueles mini
-                hamburgueres kkkkkkkk
-                <div class="photos">
-                  <img src="photos/IMG-20241125-WA0034.jpg" />
-                  <img src="photos/IMG-20241125-WA0035.jpg" />
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="fiveStarModal"
-          tabindex="-1"
-          aria-labelledby="fiveStarModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="fiveStarModalLabel">
-                  Ínicio da nova
-                </h1>
-              </div>
-              <div class="modal-body">
-                Tenho esperança que esse é apenas o começo da nossa jornada
-                juntos :)
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="line line-1-2"></div>
-        <div class="line line-2-3"></div>
-        <div class="line line-3-4"></div>
-        <div class="line line-4-5"></div>
       </div>
 
-      <label class="continue texto-pulsante" onclick="submit('step2', 'step1')"
-        >Lembrar no tempo...</label
-      >
+      <div id="pageOne" class="step1">
+        <div id="clock-modal">
+          <div id="clock">
+            <img src="clock.webp" />
+          </div>
+          <div id="clock-times">
+            <label>Ínício da história:</label> 2020<br />
+            <label>Reencontro:</label> <i id="contador"></i>
+          </div>
+          <br />
+        </div>
+        <label
+          class="continue texto-pulsante"
+          onclick="submit('step1', 'step2')"
+          >Continuar...</label
+        >
+      </div>
+
+      <div id="pageTwo" class="step2 hidden">
+        <div>
+          <div
+            class="starRecord selected"
+            data-bs-toggle="modal"
+            data-bs-target="#oneStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#twoStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#treeStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#fourStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#fiveStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#sixStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#sevenStarModal"
+          ></div>
+          <div
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#eightStarModal"
+          ></div>
+          <div
+            hidden
+            class="starRecord"
+            data-bs-toggle="modal"
+            data-bs-target="#nineStarModal"
+          ></div>
+
+          <!-- Primeiro -->
+          <div
+            class="modal fade"
+            id="oneStarModal"
+            tabindex="-1"
+            aria-labelledby="oneStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="oneStarModalLabel">
+                    Nosso primeiro date s2
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  Nos conhecemos no Happn e fomos ao nosso primeiro encontro no
+                  shopping da cidade de piqueri, até levei você para conhecer a
+                  minha mãe kkkkkkk
+                  <div class="photos">
+                    <img src="photos/IMG-20241121-WA0085.jpg" />
+                    <img src="photos/IMG-20241121-WA0086.jpg" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segundo -->
+          <div
+            class="modal fade"
+            id="twoStarModal"
+            tabindex="-1"
+            aria-labelledby="twoStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="twoStarModalLabel">
+                    Parque de Franco
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  Quando você foi toda pervetida querendo me beijar e eu apenas
+                  querendo te conhecer ( ͡° ͜ʖ ͡°), você toda fofinhaaa<br />
+                  <div class="photos">
+                    <img src="photos/IMG-20241120-WA0068.jpg" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terceiro -->
+          <div
+            class="modal fade"
+            id="treeStarModal"
+            tabindex="-1"
+            aria-labelledby="treeStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="treeStarModalLabel">
+                    Dia da vacina
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  Infelizmente não me recordo muito desse dia, e não temos
+                  fotinha :(
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quarto -->
+          <div
+            class="modal fade"
+            id="fourStarModal"
+            tabindex="-1"
+            aria-labelledby="fourStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="fourStarModalLabel">
+                    Reencontro
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  Nosso primeiro reencontro, e fiquei felizzzz demais<br />
+                  Mas mano pagamos caro e só comemos uma pratada daqueles mini
+                  hamburgueres kkkkkkkk
+                  <div class="photos">
+                    <img src="photos/IMG-20241125-WA0034.jpg" />
+                    <img src="photos/IMG-20241125-WA0035.jpg" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quinto -->
+          <div
+            class="modal fade"
+            id="fiveStarModal"
+            tabindex="-1"
+            aria-labelledby="fiveStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="fiveStarModalLabel">
+                    A virada
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  O dia em que você foi a minha lojaa, toda fofinha e bonitinha
+                  s2<br />
+                  Foi nesse dia que as coisas mudaram, te achava uma pessoa
+                  encantadora, mas apartir dai você se tornou única, aguardei
+                  pacientemente pela oportunidade e a chance para investir em
+                  você, enquanto fazia parte sileciosamente te apoiando a
+                  distância s2
+
+                  <div class="photos">
+                    <img src="photos/Screenshot_20241125-213120.png" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sexto -->
+          <div
+            class="modal fade"
+            id="sixStarModal"
+            tabindex="-1"
+            aria-labelledby="sixStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="sixStarModalLabel">
+                    A chacára
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  O dia que você me chamou pra chacara e apesar de eu ser
+                  introvertido aceitei, e foi muito divertido ksksksks Melhor
+                  ainda foi poder ficar contigo 2 dias e aproveitar da piscina,
+                  me acostumaria com aquela vida fácil fácil
+                  <div class="photos">
+                    <img src="photos/IMG-20241125-WA0041.jpg" />
+                    <img src="photos/IMG-20241125-WA0042.jpg" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sétimo -->
+          <div
+            class="modal fade"
+            id="sevenStarModal"
+            tabindex="-1"
+            aria-labelledby="sevenStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="sevenStarModalLabel">
+                    Cúlinaria do Thiago Del Rey
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  O primeiro dia que você provou da minha culinária, e aprovou
+                  :D, só não gostei de receber 9/10. Sendo que ficou 10/10 e
+                  ainda você ficou toda ansiosa mandando "to indo", "agora é
+                  sério to indo"
+                  <div class="photos">
+                    <img src="photos/IMG-20241123-WA0013.jpg" />
+                    <img src="photos/IMG-20241125-WA0039.jpg" />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Eight -->
+          <div
+            class="modal fade"
+            id="eightStarModal"
+            tabindex="-1"
+            aria-labelledby="eightStarModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="eightStarModalLabel">
+                    A decisão s2
+                  </h1>
+                </div>
+                <div class="modal-body">
+                  Nosso próximo encontro, como será? Onde será? Só sei de uma
+                  coisa, com você tudo é especial!! I LOVE YOU ELDINHA!!
+                  <div class="photos"></div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line line-1-2"></div>
+          <div class="line line-2-3"></div>
+          <div class="line line-3-4"></div>
+          <div class="line line-4-5"></div>
+          <div class="line line-5-6"></div>
+          <div class="line line-6-7"></div>
+          <div class="line line-7-8"></div>
+          <div class="line line-8-9 hidden"></div>
+        </div>
+
+        <label
+          class="continue texto-pulsante"
+          onclick="submit('step2', 'step1')"
+          >Lembrar no tempo...</label
+        >
+      </div>
     </div>
   </main>
   <footer></footer>
 </body>
+
+<script>
+  // Obtém o número de visitas armazenado no localStorage
+  let visitCount = localStorage.getItem("visitCount");
+
+  if (!visitCount) {
+    // Se for a primeira vez, inicializa o contador
+    visitCount = 1;
+  } else {
+    // Incrementa o contador
+    visitCount = parseInt(visitCount) + 1;
+  }
+
+  // Atualiza o contador no localStorage
+  localStorage.setItem("visitCount", visitCount);
+
+  // Mostra o conteúdo apropriado com base no número de visitas
+  if (visitCount <= 3) {
+    document.querySelector(".lock").style.display = "block";
+  } else if (visitCount > 3) {
+    document.querySelector(".unlock").style.display = "block";
+  }
+</script>
 
 <script>
   // Função para fazer a div desaparecer suavemente

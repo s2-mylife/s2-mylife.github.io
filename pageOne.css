@@ -257,3 +257,23 @@ body,
 .photos img {
     width: 100%;
 }
+
+
+#lockPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lock-img {
+    width: 100%;
+    height: 80%;
+}
+
+.lock-img img {
+    width: 100%;
+    height: 100%;
+}
