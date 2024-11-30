@@ -44,6 +44,12 @@
                 color: "yellow"
             },
             {
+                title: "Conhecendo amigos e os ´fogos de artificio [29-11-2024]´",
+                text: "O que falar deste dia? FANTASTICO, Conhecemos amigos e ainda por cima, nosso tão momento esperado. Como me expressar? I LOVE YOU para a Eldinnhaa a dona do sorriso mais bonito deste mundo!! ❤️❤️",
+                images: ["30_11_2024_01", "30_11_2024_02", "30_11_2024_03", "30_11_2024_04", "30_11_2024_05"],
+                color: "yellow"
+            },
+            {
                 title: "A decisão s2",
                 text: "Nosso próximo encontro, como será? Onde será? Só sei de uma coisa, com você tudo é especial!! I LOVE YOU ELDINHA!!",
                 images: [""],
