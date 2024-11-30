@@ -46,7 +46,7 @@
             {
                 title: "Conhecendo amigos e os ´fogos de artificio [29-11-2024]´",
                 text: "O que falar deste dia? FANTASTICO, Conhecemos amigos e ainda por cima, nosso tão momento esperado. Como me expressar? I LOVE YOU para a Eldinnhaa a dona do sorriso mais bonito deste mundo!! ❤️❤️",
-                images: ["29_11_2024_01.jpg", "29_11_2024_02.jpg", "29_11_2024_03.jpg", "29_11_2024_04.jpg", "29_11_2024_05.jpg"],
+                images: ["photos/29_11_2024_01.jpg", "photos/9_11_2024_02.jpg", "photos/29_11_2024_03.jpg", "photos/29_11_2024_04.jpg", "photos/29_11_2024_05.jpg"],
                 color: "yellow"
             },
             {
